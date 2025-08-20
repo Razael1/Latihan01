@@ -34,6 +34,13 @@
         width: 200px;
       }
 
+      .link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-grow: 1;
+      }
+
       .articles {
         display: flex;
         flex-direction: column; /* Susun artikel secara vertikal */
@@ -70,8 +77,11 @@
       <div class="main-content">
         <nav class="navigation">
           <ul>
+          <link class="link">
             <li>Link 1</li>
+          <link class="link">
             <li>Link 2</li>
+          <link class="link">
             <li>Link 3</li>
           </ul>
         </nav>
