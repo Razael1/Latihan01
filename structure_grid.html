@@ -24,18 +24,17 @@
         text-align: center;
       }
 
-      .navigation {
+      .navigations {
         grid-column: 1 / 2; /* Item menempati kolom pertama */
         grid-row: 2 / 3; /* Item menempati baris kedua */
         background-color: #e0ffe0b7;
-      }
-
-      .navigations {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-        background-color: #fff0e0;
         display:flex;
         flex-direction: column;
+        gap: 10px;
+      }
+
+      .navigation {
+        background-color: #fff0e0;
         padding: 10px;
       }
 
@@ -60,13 +59,13 @@
         text-align: center;
       }
 
-      .navigation ul {
+      .navigations ul {
         list-style: none;
-        padding: 0;
+        padding: 5;
         margin: 0;
       }
 
-      .navigation li {
+      .navigations li {
         margin-bottom: 5px;
       }
     </style>
@@ -74,17 +73,18 @@
   <body>
     <div class="container">
       <header class="header">Struktur HTML & CSS Grid</header>
-      <nav class="navigation">
-          <ul class="navigations">
+      <nav class="navigations">
+          <ul class="navigation">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">This is a link</a>
             <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
           </ul>
-          <ul>
+          <ul class="navigation">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">This is a link</a>
           </ul>
-      </nav>
+          <ul class="navigation">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">This is a link</a>
+          </ul>
+        </nav>
       <div class="articles">
         <article class="article">
           <h3>Article 1</h3>
