@@ -40,8 +40,7 @@ header{
 
 .logo{
     font-size: 3rem;
-    color: 
-#343132;
+    color: #343132;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -62,10 +61,8 @@ nav a{
 
 nav a :hover,
 nav a :active{
-    color: 
-#343132;
-    border-bottom: 3px solid 
-#343132;
+    color: #343132;
+    border-bottom: 3px solid #343132;
 }
 
 @media(max-width:995px){
@@ -74,10 +71,8 @@ nav a :active{
         top: 100;
         right: 0;
         width: 40%;
-        border-left: 3px solid 
-#343132;
-        border-bottom: 3px solid 
-#343132;
+        border-left: 3px solid #343132;
+        border-bottom: 3px solid #343132;
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background-color: #73151e;
