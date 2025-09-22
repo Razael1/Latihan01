@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Hafidh</a>
+        <a href="#" class="logo">Arlecchino</a>
     
         <nav>
             <a href="#" class="active">Home</a>
@@ -29,9 +29,9 @@
             <img src="img/home-img.png" alt="">
         </div>
         <div class="home-content">
-            <h1>hi it's <span> hafidh</span></h1>
-            <h3 class="typing-text">Im a <span></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, perspiciatis!</p>
+            <h1>hi it's <span> Arlecchino</span></h1>
+            <h3 class="typing-text">I'am <span></span></h3>
+            <p>"The Knave," Fourth of the Fatui Harbingers. A poised, ruthless diplomat. To the children in the House of the Hearth, she is their feared yet dependable "Father."</p>
             <div class="social-icons">
               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -41,6 +41,40 @@
         </div>
         </div>
 
+        <script>
+const words = ["Head of the House of the Hearth", "The Fourth of the Fatui Harbinger", "The Knave", "Peruere"];
+const typingText = document.querySelector('.typing-text span');
+const cursor = document.createElement('span');
+cursor.className = 'cursor';
+typingText.parentNode.insertBefore(cursor, typingText.nextSibling);
 
+let wordIndex = 0;
+let letterIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+let pauseTime = 1200;
+
+function type() {
+    const currentWord = words[wordIndex];
+    if (!isDeleting) {
+        typingText.innerText = currentWord.substring(0, letterIndex + 1);
+        letterIndex++;
+        if (letterIndex === currentWord.length) {
+            isDeleting = true;
+            setTimeout(type, pauseTime);
+            return;
+        }
+    } else {
+        typingText.innerText = currentWord.substring(0, letterIndex - 1);
+        letterIndex--;
+        if (letterIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+    setTimeout(type, typingSpeed);
+}
+type();
+</script>
 </body>
 </html>

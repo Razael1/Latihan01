@@ -73,7 +73,8 @@ nav a :active{
 @media(max-width:995px){
     nav{
         position: absolute;
-        top: 100;
+        display: none;
+        top: 0;
         right: 0;
         width: 40%;
         border-left: 3px solid #343132;
@@ -132,6 +133,10 @@ span{
     font-weight: 700;
 }
 
+.home-content p{
+    font-size: 1.6rem;
+}
+
 .home-img{
     border-radius: 50%;
 }
@@ -184,4 +189,83 @@ span{
     border: 2px solid #97112c;
     transition: 0.3s ease;
     cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #97112c;
+    color: black;
+    box-shadow: 0 0 25px #97112c;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #97112c;
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #97112c;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Human";
+    }
+    21%, 40%{
+        content: "Person";
+    }
+    41%, 60%{
+        content: "People";
+    }
+    61%, 80%{
+        content: "Arlecchino";
+    }
+    81%, 100%{
+        content: "Peruere";
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
 }
